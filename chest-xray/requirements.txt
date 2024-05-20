@@ -1,4 +1,8 @@
-pandas=2.2.2
-torch=2.3.0
-torchvision=0.18.0
-pillow=10.3.0
+pandas==2.2.2
+torch==2.3.0
+torchvision==0.18.0
+pillow==10.3.0
+transformers==4.41.0
+opencv_python_headless==4.9.0.80
+pytorch_lightning==2.2.4
+omegaconf==2.3.0
