@@ -63,7 +63,7 @@ def preprocess_report(report_content):
 
 def save_split_to_h5(split_df, split, h5_path):
     """Save a split of the dataset to an H5 file."""
-    split_path = f'{h5_path}/{split}.h5'
+    split_path = f'{h5_path}/{split}_{IMG_SIZE}.h5'
     print(f"Processing {split} split with {len(split_df)} images")
     print(f"Saving to {split_path}")
     with h5py.File(split_path, 'w') as hdf5_file:
