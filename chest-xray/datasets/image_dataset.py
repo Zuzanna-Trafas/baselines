@@ -134,9 +134,9 @@ class MIMICImageDataset(ImageBaseDataset):
     #     return keywords
 
     def preprocess_label(self, label):
-        # TODO
-        label = label.drop(['subject_id', 'study_id'], axis=1).iloc[0].to_dict()
-        return label
+        label = label.drop(['subject_id', 'study_id'], axis=1).iloc[0] #.to_dict()
+        label = label.fillna(0).replace(-1, 0)
+        return label.values
 
     def __getitem__(self, index):
         row = self.df.iloc[index]
