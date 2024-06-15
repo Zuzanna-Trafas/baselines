@@ -1,6 +1,7 @@
 import pandas as pd
 from constants import *
 from PIL import Image
+from tqdm import tqdm
 import numpy as np
 import h5py
 import re
@@ -73,10 +74,7 @@ def save_split_to_h5(split_df, split, h5_path):
         labels_dataset = hdf5_file.create_dataset("labels", (len(split_df), 14), dtype='uint8', chunks=True)
     
         valid_index = 0
-        for index, row in split_df.iterrows():
-            if index % 1000 == 0:
-                print(f"Processing image {index} / {len(split_df)}")
-
+        for index, row in tqdm(split_df.iterrows(), total=len(split_df)):
             study_id = f"s{row['study_id']}"
             subject_id = f"p{row['subject_id']}"
             folder_name = subject_id[:3]
