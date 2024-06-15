@@ -1,0 +1,7 @@
+[submodule "chest-xray/baselines/ConVIRT-pytorch"]
+	path = chest-xray/baselines/ConVIRT-pytorch
+	url = https://github.com/Zuzanna-Trafas/ConVIRT-pytorch
+
+[submodule "chest-xray/baselines/gloria"]
+	path = chest-xray/baselines/gloria
+	url = https://github.com/Zuzanna-Trafas/gloria
