@@ -7,7 +7,7 @@ from constants import *
 
 class PretrainDataset(Dataset):
     def __init__(self, split, transform=None):
-        self.hdf5_file_path = f'{MIMIC_H5_PATH}/{split}.h5'
+        self.hdf5_file_path = f'{MIMIC_H5_PATH}/{split}_224.h5'
         self.transform = transform
         
         # Open the HDF5 file
