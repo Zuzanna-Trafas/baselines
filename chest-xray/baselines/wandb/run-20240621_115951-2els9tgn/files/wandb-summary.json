@@ -1,0 +1,1 @@
+{"lr-Adam": 0.0001, "train_loss_step": 0.26884394884109497, "epoch": 40, "_step": 145057, "_runtime": 187163, "_timestamp": 1719151154, "val_loss": 0.31663408875465393, "val_auroc": 0.6398312235984119, "val_auprc": 0.20498892197645596, "train_loss_epoch": 0.31300756335258484, "train_auroc": 0.6454071453702819, "train_auprc": 0.203269052528898}

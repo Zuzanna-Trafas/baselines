@@ -1,0 +1,1 @@
+python fine_tune.py --config ~/master_thesis/chest-xray/baselines/configs/medklip.yaml --model medKLIP --ckpt_path ~/master_thesis/chest-xray/baselines/checkpoints/medKLIP --train --test

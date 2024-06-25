@@ -5,3 +5,9 @@
 [submodule "chest-xray/baselines/gloria"]
 	path = chest-xray/baselines/gloria
 	url = https://github.com/Zuzanna-Trafas/gloria
+[submodule "chest-xray/baselines/MedKLIP"]
+	path = chest-xray/baselines/MedKLIP
+	url = git@github.com:Zuzanna-Trafas/MedKLIP.git
+[submodule "chest-xray/baselines/biovil"]
+	path = chest-xray/baselines/biovil
+	url = git@github.com:Zuzanna-Trafas/hi-ml.git

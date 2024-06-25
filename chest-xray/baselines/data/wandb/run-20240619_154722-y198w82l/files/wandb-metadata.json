@@ -1,0 +1,33 @@
+{
+    "os": "Linux-5.4.0-182-generic-x86_64-with-glibc2.10",
+    "python": "3.8.5",
+    "heartbeatAt": "2024-06-19T13:47:23.596246",
+    "startedAt": "2024-06-19T13:47:22.386636",
+    "docker": null,
+    "gpu": "NVIDIA TITAN Xp",
+    "gpu_count": 2,
+    "cpu_count": 12,
+    "cuda": null,
+    "args": [
+        "--config",
+        "/home/zuzanna/master_thesis/chest-xray/baselines/configs/medklip.yaml",
+        "--model",
+        "medKLIP",
+        "--ckpt_path",
+        "/home/zuzanna/master_thesis/chest-xray/baselines/checkpoints/medKLIP",
+        "--train",
+        "--test"
+    ],
+    "state": "running",
+    "codePath": "chest-xray/baselines/fine_tune.py",
+    "program": "fine_tune.py",
+    "git": {
+        "remote": "git@github.com:Zuzanna-Trafas/master_thesis.git",
+        "commit": "e599ab407a87b6d1d9be3db0ccbdcd5801495338"
+    },
+    "email": "zuz.trafas@gmail.com",
+    "root": "/home/zuzanna/master_thesis",
+    "host": "kjp13c3c",
+    "username": "zuzanna",
+    "executable": "/home/zuzanna/miniconda3/envs/gloria/bin/python"
+}

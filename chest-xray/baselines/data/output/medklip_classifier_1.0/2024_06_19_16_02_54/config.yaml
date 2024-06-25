@@ -1,0 +1,49 @@
+experiment_name: medklip_classifier_1.0
+phase: classification
+lightning:
+  trainer:
+    gpus: '1'
+    max_epochs: 50
+    distributed_backend: dp
+    gradient_clip_val: 0.25
+    lr: 0.0001
+    precision: 16
+  checkpoint_callback:
+    monitor: val_loss
+    dirpath: ./data/ckpt/medklip_classifier_1.0/2024_06_19_16_02_54
+    save_last: true
+    mode: min
+    save_top_k: 1
+  early_stopping_callback:
+    monitor: val_loss
+    min_delta: 0.0
+    patience: 10
+    verbose: false
+    mode: min
+  logger:
+    logger_type: WandbLogger
+    save_dir: ./data/
+    project: MedKLIP
+data:
+  dataset: mimic
+  rgb: true
+  frac: 1.0
+transforms:
+  norm: half
+  random_crop:
+    crop_size: 224
+train:
+  batch_size: 64
+  num_workers: 16
+  loss_fn:
+    type: BCE
+  optimizer:
+    name: Adam
+    weight_decay: 1.0e-06
+  scheduler:
+    name: plateau
+    monitor: val_loss
+    interval: epoch
+    frequency: 3
+extension: '2024_06_19_16_02_54'
+output_dir: ./data/output/medklip_classifier_1.0/2024_06_19_16_02_54

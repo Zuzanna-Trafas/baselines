@@ -1,0 +1,1 @@
+python fine_tune.py --config ~/master_thesis/chest-xray/baselines/configs/gloria.yaml --model gloria --ckpt_path ~/master_thesis/chest-xray/baselines/checkpoints/gloria --train --test

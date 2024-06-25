@@ -1,0 +1,53 @@
+wandb_version: 1
+
+_content:
+  desc: null
+  value:
+    data: '{''dataset'': ''mimic'', ''rgb'': True, ''frac'': 1.0}'
+    experiment_name: medklip_classifier_1.0
+    extension: '2024_06_21_11_59_50'
+    lightning: '{''trainer'': {''gpus'': ''1'', ''max_epochs'': 50, ''distributed_backend'':
+      ''dp'', ''gradient_clip_val'': 0.25, ''lr'': 0.0001, ''precision'': 16}, ''checkpoint_callback'':
+      {''monitor'': ''val_loss'', ''dirpath'': ''./data/ckpt/medklip_classifier_1.0/2024_06_21_11_59_50'',
+      ''save_last'': True, ''mode'': ''min'', ''save_top_k'': 1}, ''early_stopping_callback'':
+      {''monitor'': ''val_loss'', ''min_delta'': 0.0, ''patience'': 10, ''verbose'':
+      False, ''mode'': ''min''}, ''logger'': {''logger_type'': ''WandbLogger'', ''save_dir'':
+      ''./data/'', ''project'': ''MedKLIP''}}'
+    output_dir: ./data/output/medklip_classifier_1.0/2024_06_21_11_59_50
+    phase: classification
+    train: '{''batch_size'': 64, ''num_workers'': 16, ''loss_fn'': {''type'': ''BCE''},
+      ''optimizer'': {''name'': ''Adam'', ''weight_decay'': 1e-06}, ''scheduler'':
+      {''name'': ''plateau'', ''monitor'': ''val_loss'', ''interval'': ''epoch'',
+      ''frequency'': 3}}'
+    transforms: '{''norm'': ''half'', ''random_crop'': {''crop_size'': 224}}'
+_metadata:
+  desc: null
+  value: ContainerMetadata(ref_type=<class 'dict'>, object_type=None, optional=True,
+    key=None, flags={}, resolver_cache=defaultdict(<class 'dict'>, {}), key_type=None,
+    element_type=None)
+_parent:
+  desc: null
+  value: null
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.10.14
+    framework: huggingface
+    huggingface_version: 4.2.1
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.8.5
+    t:
+      1:
+      - 1
+      - 5
+      - 9
+      - 11
+      2:
+      - 1
+      - 5
+      - 9
+      - 11
+      4: 3.8.5
+      5: 0.10.14
+      6: 4.2.1
